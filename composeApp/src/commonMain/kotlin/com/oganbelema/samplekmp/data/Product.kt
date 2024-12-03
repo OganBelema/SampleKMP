@@ -1,5 +1,8 @@
 package com.oganbelema.samplekmp.data
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Product(
     val id: Int,
     val title: String,
