@@ -17,7 +17,7 @@ class HomeViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             homeRepository.getProducts().collect { products ->
-                _products.update { products }
+                _products.update { it + products }
             }
         }
     }
